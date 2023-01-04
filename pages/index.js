@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import Avatar from '../components/Avatar';
+import { Squares2X2Icon } from "@heroicons/react/24/solid";
 
 export default function Home() {
   return (
@@ -25,7 +27,9 @@ export default function Home() {
         <p className='link'>Images</p>
         
         {/* Icon */}
-        {/* Avatar */}
+        <Squares2X2Icon className="h-8 w-8 p-2 rounded-full hover:bg-gray-100 cursor-pointer" />
+
+        <Avatar url="https://upload.wikimedia.org/wikipedia/en/6/6f/KennyMcCormick.png" />
       </div>
      </header>
 
