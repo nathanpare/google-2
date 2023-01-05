@@ -6,8 +6,10 @@ import { Squares2X2Icon, MicrophoneIcon } from "@heroicons/react/24/solid";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import Image from 'next/image';
 import { useRef } from 'react';
+import { useRouter } from 'next/router';
 
 export default function Home() {
+  const router = useRouter();
   const searchInputRef = useRef(null);
 
   const search = (e) => {
@@ -15,6 +17,8 @@ export default function Home() {
     const term = searchInputRef.current.value;
 
     if (!term) return
+
+    router.push(`/search?term=${term}`);
   };
 
   return (
