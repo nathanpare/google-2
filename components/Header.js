@@ -23,6 +23,7 @@ const Header = () => {
       <div className='flex w-full p-6 items-center'>
         <Image
           src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+          alt=''
           height={40}
           width={120}
           className="cursor-pointer"
