@@ -13,7 +13,7 @@ const context_key = process.env.CONTEXT_KEY;
 const Search = ({ results }) => {
   const router = useRouter();
 
-  console.log(results);
+
   return (
     <div>
       <Head>
@@ -24,7 +24,7 @@ const Search = ({ results }) => {
       <Header />
 
       <SearchResults results={results} />
-      
+
     </div>
   )
 }
@@ -32,7 +32,7 @@ const Search = ({ results }) => {
 export default Search;
 
 export async function getServerSideProps(context) {
-  const useDummyData = true;
+  const useDummyData = false;
   const startIndex = context.query.start || "0";
 
   const data = useDummyData ? Response : await fetch(`https://www.googleapis.com/customsearch/v1?key=${api_key}&cx=${context_key}&q=${context.query.term}&start=${startIndex}`).then((res) => res.json());

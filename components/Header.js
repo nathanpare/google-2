@@ -35,6 +35,7 @@ const Header = () => {
             ref={searchInputRef}
             className="flex-grow w-full focus:outline-none"
             type="text"
+            defaultValue={router.query.term}
           />
           <XMarkIcon className='h-7 sm:mr-3 text-gray-500 cursor-pointer transition
          duration-100 transform hover:scale-125'
@@ -46,8 +47,8 @@ const Header = () => {
           <button hidden type='submit' onClick={search}>Search</button>
         </form>
         <Avatar
-         className="ml-auto"
-         url="https://upload.wikimedia.org/wikipedia/en/6/6f/KennyMcCormick.png"
+          className="ml-auto"
+          url="https://upload.wikimedia.org/wikipedia/en/6/6f/KennyMcCormick.png"
         />
       </div>
       <HeaderOptions />
