@@ -49,12 +49,10 @@ export default function Home() {
       <form className='flex flex-col items-center mt-11 flex-grow w-4/5'>
         <Image
           src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
-          // changed dimensions from h-100, w-300
-          height={80}
-          width={250}
+          height={100}
+          width={300}
         />
-        {/* Added a search bar height property */}
-        <div className='h-8 flex w-full mt-5 hover:shadow-lg focus-within:shadow-lg
+        <div className='flex w-full mt-5 hover:shadow-lg focus-within:shadow-lg
          max-w-md rounded-full border border-gray-200 px-5 py-3 items-center
          sm:max-w-xl lg:max-w-2xl'>
           <MagnifyingGlassIcon className='h-5 mr-3 text-gray-500' />
